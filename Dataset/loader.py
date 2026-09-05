@@ -36,8 +36,13 @@ def load_dataset(
     filepath = Path(filepath)
     if not filepath.exists():
         raise FileNotFoundError(
-            f"Dataset not found at {filepath}. "
-            "Run generate_dataset.py or generate_dataset_extended.py first."
+            f"Dataset not found at: {filepath}\n"
+            "To obtain the dataset:\n"
+            "  1. Download from HuggingFace Hub (recommended):\n"
+            "     python scripts/download_data.py\n"
+            "     # Or via CLI: huggingface-cli download bukac82/MicroDopplerSignatures --repo-type dataset --local-dir .\n"
+            "  2. Or generate locally (~20-40 min):\n"
+            "     python scripts/download_data.py --source generate"
         )
     df = pd.read_csv(filepath, nrows=nrows)
     return df

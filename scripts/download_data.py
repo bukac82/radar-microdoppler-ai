@@ -18,6 +18,7 @@ Usage:
 """
 
 import argparse
+import os
 import sys
 from pathlib import Path
 
@@ -36,10 +37,11 @@ GENERATE_SCRIPT_BASE     = "Dataset/generate_dataset.py"
 GENERATE_SCRIPT_EXTENDED = "Dataset/generate_dataset_extended.py"
 
 
-def download_with_hf_hub(dest: Path):
-    """Download using huggingface_hub — supports resume, progress bar, caching."""
+def download_with_hf_hub(dest: Path, token: str | None = None):
+    """Download using huggingface_hub — supports resume, progress bar, caching, and gated access."""
     try:
         from huggingface_hub import hf_hub_download
+        from huggingface_hub.utils import GatedRepoError, RepositoryNotFoundError
     except ImportError:
         print("  ✗ huggingface_hub not installed.")
         print("    Run: pip install huggingface-hub")
@@ -62,11 +64,21 @@ def download_with_hf_hub(dest: Path):
                 repo_id=HF_REPO_ID,
                 filename=filename,
                 repo_type="dataset",
+                token=token,
                 local_dir=str(dest),
                 local_dir_use_symlinks=False,  # copy actual file, not symlink
             )
             size_gb = Path(cached_path).stat().st_size / 1e9
             print(f"  ✔  Saved {filename} ({size_gb:.2f} GB)")
+        except GatedRepoError:
+            print(f"\n  🔒 Access Restricted (Gated Dataset):")
+            print(f"     This dataset requires approval before downloading.")
+            print(f"     1. Visit: {HF_REPO_URL}")
+            print(f"     2. Request access / accept terms on the dataset page.")
+            print(f"     3. Once approved, provide your Hugging Face token:")
+            print(f"        python scripts/download_data.py --token <YOUR_HF_TOKEN>")
+            print(f"        # or run: huggingface-cli login")
+            sys.exit(1)
         except Exception as e:
             print(f"  ✗  Failed to download {filename}: {e}")
             print(f"\n  💡 Try manually:\n     pip install huggingface-hub")
@@ -145,12 +157,17 @@ Examples:
         help="Data source (default: huggingface)"
     )
     parser.add_argument(
+        "--token", default=None,
+        help="Hugging Face access token (or set HF_TOKEN env var). Required if dataset is gated."
+    )
+    parser.add_argument(
         "--fallback", action="store_true",
         help="Use direct URL download instead of huggingface_hub library"
     )
     args = parser.parse_args()
 
     dest = Path(args.dest).resolve()
+    token = args.token or os.environ.get("HF_TOKEN")
 
     print(f"\n🚀 Radar Micro-Doppler Dataset Downloader")
     print(f"   Dataset : {HF_REPO_URL}")
@@ -162,7 +179,7 @@ Examples:
     elif args.fallback:
         download_with_wget_fallback(dest)
     else:
-        download_with_hf_hub(dest)
+        download_with_hf_hub(dest, token=token)
 
     print("\n✅ Dataset ready.")
     print(f"   Files saved to: {dest}")
