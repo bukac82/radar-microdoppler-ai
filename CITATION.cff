@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "If you use this work, please cite it as below."
+message: "If you use this work, please cite the software and/or the related papers below."
 type: software
 title: "Radar Micro-Doppler AI: End-to-End Helicopter Classification with Classical, Quantum, and Deep Learning"
 authors:
@@ -7,6 +7,7 @@ authors:
     given-names: Vikas
 date-released: "2026-09-05"
 url: "https://github.com/bukac82/radar-microdoppler-ai"
+repository-code: "https://github.com/bukac82/radar-microdoppler-ai"
 license: MIT
 abstract: >
   An end-to-end AI pipeline for helicopter micro-Doppler signature classification
@@ -15,6 +16,7 @@ abstract: >
   The project includes physics-based dataset generation, robustness testing under
   AWGN and adversarial attacks, open-set recognition for unknown aerial targets,
   and model explainability via SHAP and Grad-CAM.
+  Dataset hosted at: https://huggingface.co/datasets/bukac82/MicroDopplerSignatures
 keywords:
   - radar
   - micro-doppler
@@ -24,3 +26,51 @@ keywords:
   - open-set recognition
   - adversarial robustness
   - explainable AI
+
+# ── Related peer-reviewed publications ───────────────────────────────────────
+references:
+  - type: article
+    authors:
+      - family-names: Agnihotri
+        given-names: Vikas
+      - family-names: Kaur
+        given-names: Jasleen
+      - family-names: Kaushik
+        given-names: Sarvagya
+    title: "Practical Evaluation of Quantum Kernel Methods for Radar Micro-Doppler Classification on Noisy Intermediate-Scale Quantum (NISQ) Hardware"
+    journal: "arXiv preprint"
+    year: 2026
+    url: "https://arxiv.org/abs/2601.22194"
+    identifiers:
+      - type: other
+        value: "arXiv:2601.22194"
+
+  - type: article
+    authors:
+      - family-names: Agnihotri
+        given-names: Vikas
+      - family-names: Sabharwal
+        given-names: Munish
+    title: "An Automatic Radar Based Aerial Target Recognition Framework"
+    journal: "Journal of Interdisciplinary Mathematics"
+    volume: 23
+    issue: 2
+    start: 321
+    end: 333
+    year: 2020
+    doi: "10.1080/09720502.2020.1737377"
+    url: "https://doi.org/10.1080/09720502.2020.1737377"
+
+  - type: conference-paper
+    authors:
+      - family-names: Agnihotri
+        given-names: Vikas
+      - family-names: Sabharwal
+        given-names: Munish
+      - family-names: Goyal
+        given-names: Vinay
+    title: "Effect of Frequency on Micro-Doppler Signatures of a Helicopter"
+    collection-title: "2019 International Conference on Advances in Big Data, Computing and Data Communication Systems (icABCD)"
+    year: 2019
+    doi: "10.1109/ICABCD.2019.8851024"
+    url: "https://doi.org/10.1109/ICABCD.2019.8851024"

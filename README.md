@@ -296,7 +296,9 @@ Ideas for contribution:
 
 ## 📖 Citation
 
-If you use this project in your research, please cite:
+If you use this project or dataset in your research, please cite the software repository and/or the relevant papers below:
+
+### Software Repository
 
 ```bibtex
 @software{agnihotri2026microdoppler,
@@ -309,15 +311,69 @@ If you use this project in your research, please cite:
 }
 ```
 
+### Related Papers
+
+This repository builds upon the following peer-reviewed publications by the author:
+
+**Quantum ML on NISQ Hardware** (most relevant to the `Quantum_ML/` module):
+```bibtex
+@article{agnihotri2026quantum,
+  author    = {Agnihotri, Vikas and Kaur, Jasleen and Kaushik, Sarvagya},
+  title     = {Practical Evaluation of Quantum Kernel Methods for Radar
+               Micro-Doppler Classification on Noisy Intermediate-Scale
+               Quantum ({NISQ}) Hardware},
+  journal   = {arXiv preprint},
+  volume    = {arXiv:2601.22194},
+  year      = {2026},
+  url       = {https://arxiv.org/abs/2601.22194}
+}
+```
+
+**Radar-Based ATR Framework** (foundational signal model and SVM classifier):
+```bibtex
+@article{agnihotri2020radar,
+  author    = {Agnihotri, Vikas and Sabharwal, Munish},
+  title     = {An Automatic Radar Based Aerial Target Recognition Framework},
+  journal   = {Journal of Interdisciplinary Mathematics},
+  volume    = {23},
+  number    = {2},
+  pages     = {321--333},
+  year      = {2020},
+  doi       = {10.1080/09720502.2020.1737377},
+  url       = {https://doi.org/10.1080/09720502.2020.1737377}
+}
+```
+
+**Frequency Effects on Micro-Doppler** (radar frequency analysis underpinning the extended dataset):
+```bibtex
+@inproceedings{agnihotri2019frequency,
+  author    = {Agnihotri, Vikas and Sabharwal, Munish and Goyal, Vinay},
+  title     = {Effect of Frequency on Micro-Doppler Signatures of a Helicopter},
+  booktitle = {2019 International Conference on Advances in Big Data,
+               Computing and Data Communication Systems (icABCD)},
+  year      = {2019},
+  doi       = {10.1109/ICABCD.2019.8851024},
+  url       = {https://doi.org/10.1109/ICABCD.2019.8851024}
+}
+```
+
 ---
 
 ## 📚 References
 
-1. Chen, V.C., Li, F., Ho, S.S., & Wechsler, H. (2006). *Micro-Doppler effect in radar: phenomenon, model, and simulation study*. IEEE TAS.
-2. Molchanov, P., et al. (2015). *Classification of small UAVs and birds by micro-Doppler signatures*. IET Radar.
-3. Bendale, A., & Boult, T.E. (2016). *Towards open set deep networks (OpenMax)*. CVPR.
-4. Liu, W., et al. (2020). *Energy-based out-of-distribution detection*. NeurIPS.
-5. Schuld, M., & Petruccione, F. (2021). *Machine Learning with Quantum Computers*. Springer.
+### Author's Publications
+
+1. Agnihotri, V., Kaur, J., & Kaushik, S. (2026). *Practical Evaluation of Quantum Kernel Methods for Radar Micro-Doppler Classification on NISQ Hardware*. [arXiv:2601.22194](https://arxiv.org/abs/2601.22194)
+2. Agnihotri, V., & Sabharwal, M. (2020). *An automatic radar based aerial target recognition framework*. Journal of Interdisciplinary Mathematics, 23(2), 321–333. [DOI: 10.1080/09720502.2020.1737377](https://doi.org/10.1080/09720502.2020.1737377)
+3. Agnihotri, V., Sabharwal, M., & Goyal, V. (2019). *Effect of frequency on micro-Doppler signatures of a helicopter*. 2019 International Conference on Advances in Big Data, Computing and Data Communication Systems (icABCD). [DOI: 10.1109/ICABCD.2019.8851024](https://doi.org/10.1109/ICABCD.2019.8851024)
+
+### Background Literature
+
+4. Chen, V.C., Li, F., Ho, S.S., & Wechsler, H. (2006). *Micro-Doppler effect in radar: phenomenon, model, and simulation study*. IEEE TAS.
+5. Molchanov, P., et al. (2015). *Classification of small UAVs and birds by micro-Doppler signatures*. IET Radar.
+6. Bendale, A., & Boult, T.E. (2016). *Towards open set deep networks (OpenMax)*. CVPR.
+7. Liu, W., et al. (2020). *Energy-based out-of-distribution detection*. NeurIPS.
+8. Schuld, M., & Petruccione, F. (2021). *Machine Learning with Quantum Computers*. Springer.
 
 ---
 
