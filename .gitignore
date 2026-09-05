@@ -1,0 +1,83 @@
+# =============================================================
+#  Radar Micro-Doppler AI — .gitignore
+# =============================================================
+
+# ── Large data files (use Git LFS or external hosting) ───────
+*.csv
+*.parquet
+*.hdf5
+*.h5
+*.npy
+*.npz
+
+# ── Model checkpoints & saved artifacts ──────────────────────
+*.pt
+*.pth
+*.pkl
+*.joblib
+*.onnx
+Classical_ML/models/
+Deep_Learning/checkpoints/
+Explainability/plots/
+Evaluation/results/
+Robustness_Testing/results/
+Open_Set_Recognition/results/
+
+# ── Python ───────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+eggs/
+.eggs/
+*.egg-info/
+*.egg
+MANIFEST
+.installed.cfg
+
+# ── Virtual environments ──────────────────────────────────────
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# ── Jupyter Notebooks ─────────────────────────────────────────
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+
+# ── IDEs & editors ────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ── Testing & coverage ────────────────────────────────────────
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# ── Logging & profiling ───────────────────────────────────────
+*.log
+*.prof
+wandb/
+mlruns/
+lightning_logs/
+
+# ── Docs ─────────────────────────────────────────────────────
+docs/_build/
+site/
+
+# ── Metadata (Antigravity IDE) ────────────────────────────────
+*.metadata.json
+*.docx
+Micro Doppler Data/

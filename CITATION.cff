@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+type: software
+title: "Radar Micro-Doppler AI: End-to-End Helicopter Classification with Classical, Quantum, and Deep Learning"
+authors:
+  - family-names: Agnihotri
+    given-names: Vikas
+date-released: "2026-09-05"
+url: "https://github.com/bukac82/radar-microdoppler-ai"
+license: MIT
+abstract: >
+  An end-to-end AI pipeline for helicopter micro-Doppler signature classification
+  using Classical ML (SVM, Random Forest, XGBoost, k-NN), Quantum ML (QK-SVM, VQC),
+  and Deep Learning (ResNet CNN, Bi-LSTM, Spectrogram Transformer).
+  The project includes physics-based dataset generation, robustness testing under
+  AWGN and adversarial attacks, open-set recognition for unknown aerial targets,
+  and model explainability via SHAP and Grad-CAM.
+keywords:
+  - radar
+  - micro-doppler
+  - helicopter classification
+  - quantum machine learning
+  - deep learning
+  - open-set recognition
+  - adversarial robustness
+  - explainable AI
