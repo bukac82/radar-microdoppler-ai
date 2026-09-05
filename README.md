@@ -378,5 +378,5 @@ This repository builds upon the following peer-reviewed publications by the auth
 ---
 
 <div align="center">
-<sub>Made with ❤️ for the radar signal processing and AI community</sub>
+<sub>Made for the radar signal processing and AI community</sub>
 </div>
