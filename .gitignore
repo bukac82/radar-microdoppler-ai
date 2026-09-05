@@ -81,3 +81,10 @@ site/
 *.metadata.json
 *.docx
 Micro Doppler Data/
+
+# ── Removed: AI meta/utility scripts ─────────────────────────────────────────
+scripts/generate_notebooks.py
+Dataset/create_docx.py
+create_docx.py
+generate_dataset.py
+generate_dataset_extended.py
